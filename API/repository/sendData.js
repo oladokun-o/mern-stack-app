@@ -6,11 +6,10 @@ const createFile = require('./createFile')
 module.exports = {
     mailData: async (req, res) => {
         let transporter = nodemailer.createTransport({
-            host: "smtp.ethereal.email",
-            port: 587,
+            service: "gmail",
             auth: {
-                user: 'alba.beier@ethereal.email', // generated ethereal user
-                pass: 'hZ2UkA6GAzS7HfeBUm', // generated ethereal password
+                user: process.env.SMTP_USER,
+                pass: process.env.SMPT_PASS,
             },
         })
 
@@ -35,7 +34,7 @@ module.exports = {
                             __dirname = './public';
                             var Data = {
                                 from: 'oladokun@table.test',
-                                to: 'alba.beier@ethereal.email',
+                                to: 'alba.beier@ethereal.email,oladipupoladokun@gmail.com',
                                 subject: 'User Data',
                                 html: htmlToSend,
                                 //attachments: [{path: __dirname + '/build.pdf'}]
