@@ -2,13 +2,14 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-console.log('environment    ', process.env.ENVIRONMENT)
-console.log('PORT    ', process.env.PORT)
-console.log('MONGO_CONNECTION_STRING    ', process.env.MONGO_CONNECTION_STRING)
+
 if(process.env.ENVIRONMENT !== 'production') {
     require('dotenv').config()
 }
 
+console.log('environment', process.env.ENVIRONMENT)
+console.log('PORT:', process.env.PORT)
+console.log('MONGO_CONNECTION_STRING:', process.env.MONGO_CONNECTION_STRING)
 
 const userController = require('./controller/user-control')
 
