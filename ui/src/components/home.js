@@ -9,13 +9,7 @@ function Home() {
   const [users, setUsers] = useState([])
   const [numberOfUsers, setNumberOfUsers] = useState([])
   const [isUserEdited, setUserEdited] = useState(false)
-  const properties = [
-    'id',
-    'name',
-    'phone_number',
-    'email',
-    'hobbies',
-  ];
+
 
   useEffect(() => {
     getAllUsers().then(users => {
