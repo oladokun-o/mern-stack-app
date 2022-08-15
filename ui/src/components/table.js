@@ -71,8 +71,8 @@ export const Table = ({users, sortTable, userCreated, deleteUserData, userDataEd
 			})
 
 			sendData(state.SelectedList).then((res) => {
-				if (res.responseCode === 200) {
-					alert(JSON.stringify(res.response))
+				if (res.status === 200) {
+					alert(JSON.stringify(res))
 					setState({ 
 						MasterChecked: state.MasterChecked,
 						List: tempList,

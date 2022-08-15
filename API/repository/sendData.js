@@ -6,10 +6,11 @@ const createFile = require('./createFile')
 module.exports = {
     mailData: async (req, res) => {
         let transporter = nodemailer.createTransport({
-            service: "gmail",
+            service: 'gmail',
+            host: 'smtp.gmail.com',
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMPT_PASS,
+                pass: process.env.SMTP_PASS,
             },
         })
 
@@ -43,11 +44,11 @@ module.exports = {
                     
                         transporter.sendMail(Data, function (err, info) {
                             if (err) {
-                                //console.log(err);
-                                console.log('Email sent!');
+                                console.log(err);                                
                                 res.status(401).send(err)                                   
                             } else if (!err) {
                                 //console.log(info) 
+                                console.log('Email sent!');
                                 res.status(200).send(info)
                             }
                         })
