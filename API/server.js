@@ -19,7 +19,7 @@ const port = process.env.PORT || 3080;
 
 app.use(express.static(path.join(__dirname, './ui/build')));
 app.use(bodyParser.json());
-
+app.get('/', (req, res) => { res.send('Hello from Heroku!')});
 app.get('/api/users', (req, res) => {
     userController.getUsers().then(data => res.json(data));
 });
@@ -55,4 +55,4 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`Server listening on the port  ${port}`);
-})
+});
