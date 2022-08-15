@@ -35,7 +35,7 @@ module.exports = {
                             __dirname = './public';
                             var Data = {
                                 from: 'oladokun@table.test',
-                                to: 'alba.beier@ethereal.email,oladipupoladokun@gmail.com',
+                                to: 'info@redpositive.in',
                                 subject: 'User Data',
                                 html: htmlToSend,
                                 //attachments: [{path: __dirname + '/build.pdf'}]
