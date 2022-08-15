@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 console.log('environment    ', process.env.ENVIRONMENT)
 console.log('PORT    ', process.env.PORT)
 console.log('MONGO_CONNECTION_STRING    ', process.env.MONGO_CONNECTION_STRING)
@@ -15,6 +15,7 @@ const userController = require('./controller/user-control')
 
 
 const app = express();
+app.use(cors())
 const port = process.env.PORT || 3080;
 
 app.use(express.static(path.join(__dirname, './ui/build')));
