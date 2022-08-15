@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+thead th {
+    color: white;
+    font-weight: lighter !important;
+    font-family: 'Poppins' !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+    outline: #222222 !important;
+    box-shadow: none !important;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:disabled {
+    background: #f53535 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+table:disabled {
+    pointer-events: none;
+    opacity: 0.7;
 }
 
-.App-link {
-  color: #61dafb;
+table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    border-style: hidden; 
+    box-shadow: 0 0 0 1px #8a8a8a4f; /* this draws the table border  */ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.add-btn,.primary-btn {
+    border-radius: 5px;
+    background: #f53535;
+    border: none;
+}
+
+.add-btn:hover,.add-btn:active,.add-btn:focus,
+.primary-btn:hover,.primary-btn:active,.primary-btn:focus,
+.action-btns button:hover,.action-btns button:active,.action-btns button:focus {
+    background: #da1e1e !important;
+    color: inherit !important;
+}
+
+select:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+th, td {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle !important;
+    font-weight: lighter;
+}
+
+.cell-btn {
+    background: none !important;
+    color: white;
+    border: none !important;
+}
+
+.cell-btn:hover {
+    color: #222222;
+}
+
+.cell-btns {
+    width: 40px;
+}
+
+.action-btns button {
+    background: #a7a2a23a;
+    font-size: medium;
+    margin: 0 15px;
+    background: #f53535;
+    color: white;
+    font-weight: lighter;
+}
+
+.action-btns button:last-child {
+    margin: 0 15px 0px 10px;
+}
+
+footer {
+    padding: 20px 20px;
+    box-shadow: 0 0 5px #000000af;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-body {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.modal-content button.btn-close {
+    color: white !important;
+    background: transparent;
+    font-size: 25px;
+    height: 40px;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.modal-body form input {
+    background: #030303 !important;
+    border: none;    
+    color: white !important;
+}
+
+.modal-body form input:focus {
+    box-shadow: none !important;
+    background: #030303d7;
+}
+
+.header {
+    background: #030303;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+table thead {
+    position: sticky;
+    top: 90px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #000000af;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+table {
+    margin-bottom: 90px !important;
+}
+
+.filter__link.desc::after {
+    content: "▼"; 
+    font-size: 9px;
+}
+
+.filter__link.asc::after {
+    content: "▲";
+    font-size: 9px;
+}
+
+.action-btns-box {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 100;
 }
