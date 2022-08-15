@@ -137,11 +137,13 @@ export const Table = ({users, sortTable, userCreated, deleteUserData, userDataEd
 
     return (
 			<>
-				<div className="action-btns-box action-btns">
-					<SendButton action={GetSelectedRows} state={state.btn} status={state.sending}></SendButton> 
-					<DeleteButton action={DeleteSelected} state={state.btn} status={state.deleting}></DeleteButton>	
-					<CreateUser userCreated={userCreated} state={state.sending || state.deleting}></CreateUser>			 
-				</div>       
+				<div className="container-fluid position-relative border">
+          <div className="action-btns-box action-btns">
+            <SendButton action={GetSelectedRows} state={state.btn} status={state.sending}></SendButton> 
+            <DeleteButton action={DeleteSelected} state={state.btn} status={state.deleting}></DeleteButton>	
+            <CreateUser userCreated={userCreated} state={state.sending || state.deleting}></CreateUser>			 
+          </div>   
+        </div>    
         <div className="container-fluid">   							
             <div className="container-fluid px-0 mt-5 pt-3">
               <table className="table table-dark table-hover mt-5">
@@ -183,7 +185,7 @@ export const Table = ({users, sortTable, userCreated, deleteUserData, userDataEd
                       <td className='table-data'>{user.phone_number}</td>
                       <td className='table-data'>{user.email}</td>
                       <td className='table-data'>{user.hobbies}</td>
-                      <td>
+                      <td className='pe-4'>
                         <div className={state.sending || state.deleting ? "cell-btns Disabled" : "cell-btns"}>
                                 <div className="row">
                                     <div className="col-6 p-0">
