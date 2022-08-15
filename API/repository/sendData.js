@@ -21,7 +21,7 @@ module.exports = {
                 console.log('Successfully created html file');
                 console.log('Creating PDF file...');
                 stat = 200;
-                if ((await createFile.createPdf()).status === 200) {
+                if (/** (await createFile.createPdf()).status*/ stat === 200) {
                     console.log('Successfully created PDF file');
                     console.log('Sending data to email...');
                     fs.readFile('./public/build.html', { encoding: 'utf-8' }, function (err, html) {
@@ -35,10 +35,10 @@ module.exports = {
                             __dirname = './public';
                             var Data = {
                                 from: 'oladokun@table.test',
-                                to: 'oladipupoladokun@gmail.com',//'info@redpositive.in',
+                                to: 'info@redpositive.in',
                                 subject: 'User Data',
                                 html: htmlToSend,
-                                attachments: [{path: __dirname + '/build.pdf'}]
+                                //attachments: [{path: __dirname + '/build.pdf'}]
                             }
                         }
                     
