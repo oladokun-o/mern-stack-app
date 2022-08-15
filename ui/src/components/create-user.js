@@ -44,7 +44,7 @@ export default function CreateUser(props) {
                         
             <AddButton action={closePopUp} state={props.state}></AddButton>         
             <div className="container-fluid position-fixed header py-3 shadow">
-                <div className="row pt-3">
+                <div className="row pt-3 ps-3">
                     <div className="col-6">
                         <h2>User Data</h2>
                     </div>

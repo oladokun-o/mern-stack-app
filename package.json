@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/honcho-man/mern-stack-app/issues"
   },
-  "homepage": "https://github.com/honcho-man/mern-stack-app#readme"
+  "homepage": "https://github.com/honcho-man/mern-stack-app#readme",
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.13.2"
+  }
 }

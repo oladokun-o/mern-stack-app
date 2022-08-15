@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EditTaskModal from './edit-user';
-import { sendData, deleteAllSelectedUser } from '../services/UserService';
+import { sendData } from '../services/UserService';
 import { SendButton, DeleteButton } from './action-btns';
 import CreateUser from './create-user';
 
